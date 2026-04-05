@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReactPro — Aprende React desde cero</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">React<span>Pro</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre">El curso</a>
+        <a href="#temario">Temario</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#precio">Precios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#precio" class="nav-btn">Inscribirme</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-body reveal">
+      <span class="badge">🚀 Nueva cohorte · Junio 2026</span>
+      <h1>Domina <em>React</em><br>en 12 semanas</h1>
+      <p class="hero-desc">
+        Del cero al full stack. Aprende React, hooks, TypeScript,
+        Next.js y despliegue en la nube con proyectos reales.
+      </p>
+      <div class="hero-ctas">
+        <a href="#precio" class="btn-main">Ver planes →</a>
+        <a href="#sobre" class="btn-ghost">Conocer el programa</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>+800</b><span>estudiantes</span></div>
+        <div class="sep"></div>
+        <div class="hstat"><b>96%</b><span>empleabilidad</span></div>
+        <div class="sep"></div>
+        <div class="hstat"><b>4.9 ★</b><span>valoración</span></div>
+      </div>
+    </div>
+
+    <div class="hero-card reveal delay-1">
+      <div class="card-top">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="fname">Counter.jsx</span>
+      </div>
+      <pre class="code"><span class="ck">import</span> { useState } <span class="ck">from</span> <span class="cs">'react'</span>;
+
+<span class="ck">export default function</span> <span class="cf">Counter</span>() {
+  <span class="ck">const</span> [count, setCount] =
+    useState(<span class="cn">0</span>);
+
+  <span class="ck">return</span> (
+    &lt;<span class="ct">div</span> className=<span class="cs">"counter"</span>&gt;
+      &lt;<span class="ct">h2</span>&gt;Clicks: {count}&lt;/<span class="ct">h2</span>&gt;
+      &lt;<span class="ct">button</span>
+        onClick={() =&gt;
+          setCount(c =&gt; c + <span class="cn">1</span>)
+        }
+      &gt;+1&lt;/<span class="ct">button</span>&gt;
+    &lt;/<span class="ct">div</span>&gt;
+  );
+}</pre>
+    </div>
+  </section>
+
+  <!-- ══════════ SOBRE ══════════ -->
+  <section class="sobre" id="sobre">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>¿Por qué ReactPro?</h2>
+        <p>Diseñado por devs, para devs. Sin relleno.</p>
+      </div>
+      <div class="features">
+        <div class="feat reveal"><div class="feat-icon">⚡</div><h3>Proyectos reales</h3><p>Cada módulo termina con algo que puedes mostrar en tu portafolio. Sin ejercicios vacíos.</p></div>
+        <div class="feat reveal delay-1"><div class="feat-icon">🎯</div><h3>Stack vigente</h3><p>React 19, TypeScript, Next.js App Router, Tailwind y despliegue en Vercel.</p></div>
+        <div class="feat reveal delay-2"><div class="feat-icon">🧑‍🏫</div><h3>Mentoría en vivo</h3><p>Sesiones semanales en directo + Discord activo los 7 días con el instructor.</p></div>
+        <div class="feat reveal"><div class="feat-icon">🏆</div><h3>Certificado verificable</h3><p>Credencial digital con QR. Compártela en LinkedIn y destácate ante reclutadores.</p></div>
+        <div class="feat reveal delay-1"><div class="feat-icon">💼</div><h3>Bolsa de empleo</h3><p>Acceso a nuestra red de +60 empresas tech aliadas y preparación para entrevistas.</p></div>
+        <div class="feat reveal delay-2"><div class="feat-icon">♾️</div><h3>Acceso de por vida</h3><p>El contenido y todas las actualizaciones futuras son tuyas para siempre.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TEMARIO ══════════ -->
+  <section class="temario" id="temario">
+    <div class="wrap">
+      <div class="sec-head light">
+        <h2>Temario completo</h2>
+        <p>12 módulos · 100+ horas de contenido</p>
+      </div>
+      <div class="accordion" id="accordion">
+
+        <div class="acc-item">
+          <button class="acc-btn open">
+            <span><mark>M1–2</mark> Fundamentos: HTML, CSS y Git</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body show">
+            <ul><li>Estructura semántica y accesibilidad</li><li>Flexbox y CSS Grid práctico</li><li>Variables CSS y diseño responsive</li><li>Control de versiones con Git &amp; GitHub</li></ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span><mark>M3–5</mark> JavaScript moderno (ES2024)</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <ul><li>Arrow functions, destructuring y spread</li><li>Promesas, async/await y fetch API</li><li>Módulos ES y bundling con Vite</li><li>Introducción a TypeScript</li></ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span><mark>M6–9</mark> React &amp; ecosistema</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <ul><li>Componentes, props y estado</li><li>Hooks: useState, useEffect, useContext</li><li>React Router y Zustand para estado global</li><li>Testing con Vitest y React Testing Library</li></ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span><mark>M10–12</mark> Next.js, Prisma y deploy</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <ul><li>App Router, Server Components y RSC</li><li>API Routes y autenticación con NextAuth</li><li>Base de datos con Prisma + PostgreSQL</li><li>Despliegue en Vercel y CI/CD con GitHub Actions</li></ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ INSTRUCTOR ══════════ -->
+  <section class="instructor" id="instructor">
+    <div class="wrap inst-grid">
+      <div class="inst-avatar reveal">SR</div>
+      <div class="inst-bio reveal delay-1">
+        <span class="inst-label">Tu instructor</span>
+        <h2>Sebastián Ruiz</h2>
+        <p class="inst-role">Senior Frontend Engineer · Ex-Mercado Libre · 9 años de experiencia</p>
+        <p>He construido productos usados por millones de personas en Latinoamérica. Ahora enseño lo que realmente importa en el mercado real.</p>
+        <div class="tags">
+          <span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>AWS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRECIOS ══════════ -->
+  <section class="precios" id="precio">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Elige tu plan</h2>
+        <p>Garantía de devolución de 14 días. Sin preguntas.</p>
+      </div>
+      <div class="price-grid">
+
+        <div class="pcard reveal">
+          <h3>Básico</h3>
+          <div class="price"><sup>$</sup>149<small>/única vez</small></div>
+          <ul class="perks">
+            <li class="yes">✓ Todos los módulos grabados</li>
+            <li class="yes">✓ Material descargable</li>
+            <li class="yes">✓ Comunidad Discord</li>
+            <li class="yes">✓ Certificado digital</li>
+            <li class="no">✗ Mentoría en vivo</li>
+            <li class="no">✗ Bolsa de empleo</li>
+          </ul>
+          <a href="#" class="btn-outline">Empezar</a>
+        </div>
+
+        <div class="pcard featured reveal delay-1">
+          <div class="pop-tag">Más popular</div>
+          <h3>Pro</h3>
+          <div class="price"><sup>$</sup>299<small>/única vez</small></div>
+          <ul class="perks">
+            <li class="yes">✓ Todo lo del plan Básico</li>
+            <li class="yes">✓ Mentoría semanal en vivo</li>
+            <li class="yes">✓ Revisión de código 1:1</li>
+            <li class="yes">✓ Bolsa de empleo</li>
+            <li class="yes">✓ Revisión de CV y LinkedIn</li>
+            <li class="yes">✓ Soporte prioritario</li>
+          </ul>
+          <a href="#" class="btn-main">Inscribirme al Pro</a>
+        </div>
+
+        <div class="pcard reveal delay-2">
+          <h3>Equipos</h3>
+          <div class="price">Custom</div>
+          <ul class="perks">
+            <li class="yes">✓ Licencias múltiples</li>
+            <li class="yes">✓ Panel de seguimiento</li>
+            <li class="yes">✓ Factura empresarial</li>
+            <li class="yes">✓ Instructor dedicado</li>
+            <li class="yes">✓ Taller en vivo opcional</li>
+            <li class="yes">✓ SLA garantizado</li>
+          </ul>
+          <a href="#" class="btn-outline">Contactar ventas</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="faq" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="sec-head">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="accordion" id="faq-acc">
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span>¿Necesito experiencia previa?</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <p>No. Empezamos desde los fundamentos de HTML y CSS. Si ya tienes base, avanzarás más rápido, pero no es requisito.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span>¿Cuánto tiempo debo dedicar por semana?</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <p>Recomendamos entre 8 y 10 horas. El contenido es asíncrono, puedes organizarte como prefieras.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span>¿Cuándo empieza la próxima cohorte?</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <p>La cohorte de junio 2026 arranca el lunes 2 de junio. Los cupos son limitados a 35 estudiantes por grupo.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn">
+            <span>¿Tienen garantía de devolución?</span>
+            <svg class="acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <p>Sí. Si en los primeros 14 días el curso no cumple tus expectativas, te devolvemos el 100% sin preguntas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA FINAL ══════════ -->
+  <section class="cta-final">
+    <div class="wrap cta-content reveal">
+      <h2>Tu carrera en tech empieza hoy</h2>
+      <p>Únete a +800 desarrolladores que ya transformaron su futuro con ReactPro.</p>
+      <a href="#precio" class="btn-main big">Reservar mi lugar →</a>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <a href="#" class="logo">React<span>Pro</span></a>
+      <p>© 2026 ReactPro — Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
